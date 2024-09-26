@@ -1,7 +1,7 @@
 # Read in a csv file as a dictionary
 # PFDA - Topic 1 - getting started
 # Author: Ermelinda Qejvani
-# Based on lectures from Andrew Beatty
+# Based on lectures by Andrew Beatty
 
 import csv
 
