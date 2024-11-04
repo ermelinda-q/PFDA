@@ -17,36 +17,24 @@
 # If the attackers dice is the same or lower they loose one troop otherwise the defender looses a troop (ie if the attackers dice is higher)
 
 # Importing modules needed for the game.
-
-import pandas as pd
+import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Creating an array of random numbers for both players using numpy (np).
+# Defining a function to create arrays using numpy.
+# The function creates, sorts, and re-sorts the arrays in descending order.
+# It also truncates the array to the highest two values, if necessary(attacker's draws).
+def roll_dice(number_of_dice):
+    rolls = np.random.randint(1, 7, size=(1000,number_of_dice))
+    rolls.sort()
+    rolls_sorted = np.fliplr(rolls)
+    return rolls_sorted[:, :2]
 
-# Attacker's array: Create, sort, and flip values in descending order.
-attacker_roll = np.random.randint(1,7, size=(1000,3))
-print("This is the attacker's roll\n")
-print(attacker_roll)
-attacker_roll.sort()
-print("This is the attacker's roll sorted.\n")
-print(attacker_roll)
-attacker_roll_sorted = np.fliplr(attacker_roll)
-attacker_roll_sorted = attacker_roll_sorted[:,:2]
-print("This is the attacker's roll sorted.\n")
-print(attacker_roll_sorted)
+attacker_rolls = roll_dice(3)       # call function for the attacker.
+defender_rolls = roll_dice(2)       # call function for the defender.
 
-# Defender's array: Create, sort and flip values in descending order.
-defender_roll = np.random.randint(1,7, size=(1000,2))
-print("This is the defender's roll\n")
-print(defender_roll)
-defender_roll.sort()
-print("This is the defender's roll\n")
-print(defender_roll)
-defender_roll_sorted = np.fliplr(defender_roll)
-print("This is the defender's roll sorted.\n")
-print(defender_roll_sorted)
-
+print(attacker_rolls)               # checking that the function works.
+print(defender_rolls)               # it does!!!
 
 
 # REFERENCES:
