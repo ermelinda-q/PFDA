@@ -74,7 +74,30 @@ for i in range(number_of_battles):
 print(f"Total results after {number_of_battles} battles:")
 print(f"Attacker battle wins: {attacker_battle_wins}, Defender battle wins: {defender_battle_wins}, Total draws: {total_draws}")
 
+# Crating labels for the values of attacker_battle_wins, defender_battle_wins & total_draws.
+game_labels = 'Attacker wins', 'Defender wins', 'Draws'
 
+# using numpy I'm creating an array of values obtained from the game.
+sizes = np.array([attacker_battle_wins, defender_battle_wins, total_draws])
+
+# I will use explode to separate one slice of the pie chart from the others.
+myexplode = [0.2, 0, 0]
+
+# Set figure size.
+plt.figure(figsize=(7,7))
+
+# Plotting the PieChart.
+plt.pie(sizes, labels=game_labels, shadow = True, autopct='%1.1f%%',
+       pctdistance=0.6, labeldistance=0.4, explode=myexplode)
+
+# Adding a legend to the chart.
+plt.legend()
+
+# Adding a title and formatting it. 
+plt.title('Risk Battle Results', fontweight='bold', fontsize=18, color='navy', bbox={'facecolor':'0.8', 'pad':5})
+
+# Show the Chart.
+plt.show()
 
 # REFERENCES:
 # https://discuss.codecademy.com/t/can-we-sort-numpy-arrays-in-reverse-order/357941
