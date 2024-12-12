@@ -20,10 +20,10 @@ You can find out more about [writing in MarkDown in GitHub's documentation](http
 │   ├── battle_results.txt 
 ├── data-files
 │   ├── weatherreadings1.csv
-├── assignment_6_weather.ipynb 
-├── assignment2-weather.ipynb 
-├── assignment03-pie.ipynb
 ├── README.md                   # Main repository overview (this file).
+├── assignment03-pie.ipynb
+├── assignment2-weather.ipynb 
+├── assignment_6_weather.ipynb
 ├── sample.py
 └── test.txt
 ```
