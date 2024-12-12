@@ -10,3 +10,5 @@ This is the main repository for the **Programming for Data Analytics** module, o
 3. **MyWork**: A personal workspace for experiments, practice code, and additional materials.
 
 ## Repository Structure
+
+ProgrammingForDataAnalytics/ ├── assignments/ # Coursework assignments (with its own README) ├── project/ # Module project (with its own README) ├── mywork/ # Personal practice and experiments └── README.md # Main repository overview (this file)
