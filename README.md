@@ -16,8 +16,8 @@ This is the main repository for the **Programming for Data Analytics** module, o
 ├── mywork/            # PFDA Personal practice and labs
 ├── project/           # PFDA Module project (with its own README)
 ├──.gitignore          # .gitignore file for this repository.
-└── README.md          # Main repository overview (this file).```
-
+└── README.md          # Main repository overview (this file).
+```
 
 ## Get Started
 
