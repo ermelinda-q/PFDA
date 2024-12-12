@@ -11,11 +11,37 @@ You can find out more about [writing in MarkDown in GitHub's documentation](http
 
 ***
 
-## About this Repository
+## Assignment Repository Structure
 
-This repository contains the assignments for the **Programming for Data Analytics - PFDA** module. The code is written in Python, with files in the following formats:
+```./assignments/
+├── assignment 5/      
+│   ├── assignment_5_risk.ipynb
+│   ├── assignment_5_risk.py
+│   ├── battle_results.txt 
+├── data-files
+│   ├── weatherreadings1.csv
+├── assignment_6_weather.ipynb 
+├── assignment2-weather.ipynb 
+├── assignment03-pie.ipynb
+├── README.md                   # Main repository overview (this file).
+├── sample.py
+└── test.txt
+```
 
+## Get Started
 
-## Getting Started
+To run the files stored in this repository you will need to download and install in your computer the following apps:
 
+- [Anaconda](https://www.anaconda.com/) - open-source platform that allows you to write and execute code in Python. A guide how to install Anaconda in your computer can be found [here](https://docs.anaconda.com/free/anaconda/install/index.html).
+- [Visual Studio Code](https://code.visualstudio.com/) - source code editor for developers. With Visual Studio Code you can open and run all python files(ending with .py). A guide how to install and setup Visual Studio Code in your computer can be found [here](https://code.visualstudio.com/learn/get-started/basics).
+- [Git](https://git-scm.com/downloads) - will help you to download a copy of this repository in your local machine. Installation guide can be found [here](https://github.com/git-guides/install-git).
 
+To make a copy of this repository in your computer/local machine run the following command:
+
+```
+git clone https://github.com/ermelinda-q/PFDA/tree/main/assignments
+```
+
+## Contributions
+
+Feel free to contribute by submitting pull requests for improvements or additional work.
