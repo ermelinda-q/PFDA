@@ -11,13 +11,9 @@ This is the main repository for the **Programming for Data Analytics** module, o
 
 ## Repository Structure
 
-ProgrammingForDataAnalytics/
+```ProgrammingForDataAnalytics/
 ├── assignments/       # PFDA Coursework assignments (with its own README)
-
 ├── mywork/            # PFDA Personal practice and experiments
-
 ├── project/           # PFDA Module project (with its own README)
-
 ├──.gitignore          # .gitignore file for this repository.
-
-└── README.md          # Main repository overview (this file).
+└── README.md          # Main repository overview (this file).```
