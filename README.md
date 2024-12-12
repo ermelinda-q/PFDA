@@ -32,3 +32,7 @@ To make a copy of this repository in your computer/local machine run the followi
 ```
 git clone https://github.com/ermelinda-q/PFDA
 ```
+
+## Contributions
+
+Feel free to contribute by submitting pull requests for improvements or additional work.
