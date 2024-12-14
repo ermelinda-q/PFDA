@@ -38,7 +38,7 @@ This git sub-repository (PFDA/assignments) holds all the assignment files of Pro
 There are four weekly assignments for the *Programming for Data Analytics* module, part of the *Computer Science for Data Analytics* program. The assignments involve reading data from `.csv` files, analyzing it, and creating visualizations like graphs and pie charts. This files are created using Python, in `.ipynb` Jupyter Notebook and `.py` formats. This repository showcases practical skills in working with data and creating visual insights.
 ***
 
-**Week 2 Assignment**
+### Week 2 Assignment
 
 _File Name: assignment2-weather.ipynb_
 
@@ -59,6 +59,25 @@ _Date and time formating_
 - https://www.geeksforgeeks.org/plot-multiple-plots-in-matplotlib/
 - https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
 ***
+
+### Week 3 Assignment
+
+_File Name: assignment03-pie.ipynb_
+
+***Assignment Requirements:***
+
+* Create a notebook called assignment03-pie.ipynb. The note book should have a nice pie chart of peoples email domains in the csv file at the url https://drive.google.com/uc?id=1AWPf-pJodJKeHsARQK_RHiNsE8fjPCVK&export=download. This csv file has 1000 people. You may download the data or link to it.
+
+**References:**
+
+- https://realpython.com/pandas-dataframe/
+- https://stackoverflow.com/questions/53044548/how-to-extract-domain-from-email-address-with-pandas
+- https://www.w3schools.com/python/matplotlib_pie_charts.asp
+- https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
+***
+
+### Week 5 Assignment
+
 
 ## Get Started
 
