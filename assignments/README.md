@@ -18,7 +18,7 @@ This git sub-repository (PFDA/assignments) holds all the assignment files of Pro
 **Structure of the Repository**
 
 ```
-./assignments/                   # main folder/this sub-directory.
+./assignments/                      # main folder/this sub-directory.
 ├── assignment 5/                   # assignment 5 folder - holds 3 files: assignment_5_risk.ipynb, assignment_5_risk.py and battle_results.txt.
 │   ├── assignment_5_risk.ipynb     # main assignment 5 file.
 │   ├── assignment_5_risk.py        # a basic version of assignment 5.
@@ -31,6 +31,17 @@ This git sub-repository (PFDA/assignments) holds all the assignment files of Pro
 ├── assignment_6_weather.ipynb      # main file for the week 6 assignment.
 └── test.txt                        # test file uploaded at the start of the module.
 ```
+***
+
+## About the Assignments
+
+There are four weekly assignments for the *Programming for Data Analytics* module, part of the *Computer Science for Data Analytics* program. The assignments involve reading data from `.csv` files, analyzing it, and creating visualizations like graphs and pie charts. This files are created using Python, in `.ipynb` Jupyter Notebook and `.py` formats. This repository showcases practical skills in working with data and creating visual insights.
+
+**Week 2 Assignment**
+_File Name: assignment2-weather.ipynb_
+
+
+***
 
 ## Get Started
 
