@@ -11,21 +11,24 @@ You can find out more about [writing in MarkDown in GitHub's documentation](http
 
 ***
 
-## Assignment Repository Structure
+## About this Repository
 
-```./assignments/
-├── assignment 5/      
-│   ├── assignment_5_risk.ipynb
-│   ├── assignment_5_risk.py
-│   ├── battle_results.txt 
-├── data-files
-│   ├── weatherreadings1.csv
-├── README.md                   # Main repository overview (this file).
-├── assignment03-pie.ipynb
-├── assignment2-weather.ipynb 
-├── assignment_6_weather.ipynb
-├── sample.py
-└── test.txt
+This git sub-repository (PFDA/assignments) holds all the assignment files of Programming for Data Analytics module, as part of my [Hdip in Computer Science in Data Analytics](https://www.atu.ie/courses/higher-diploma-in-science-data-analytics#:~:text=You%20are%20a%20Level%208,topics%20in%20your%20original%20degree) in [ATU](https://www.atu.ie/).
+
+**Structure of the Repository**
+
+```./assignments/                   # main folder/this sub-directory.
+├── assignment 5/                   # assignment 5 folder - holds 3 files: assignment_5_risk.ipynb, assignment_5_risk.py and battle_results.txt.
+│   ├── assignment_5_risk.ipynb     # main assignment 5 file.
+│   ├── assignment_5_risk.py        # an older version of assignment 5.
+│   └── battle_results.txt          # this file it's created by running assignment_5_risk.ipynb, and holds all results of the game.
+├── data-files                      # directory holding weatherreadings1.csv file which is used in assignment2-weather.ipynb
+│   └── weatherreadings1.csv
+├── README.md                       # Main repository overview (this file).
+├── assignment03-pie.ipynb          # main file for the week 3 assignment.
+├── assignment2-weather.ipynb       # main file for the week 2 assignment.
+├── assignment_6_weather.ipynb      # main file for the week 6 assignment.
+└── test.txt                        # test file uploaded at the start of the module.
 ```
 
 ## Get Started
