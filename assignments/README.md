@@ -17,10 +17,11 @@ This git sub-repository (PFDA/assignments) holds all the assignment files of Pro
 
 **Structure of the Repository**
 
-```./assignments/                   # main folder/this sub-directory.
+```
+./assignments/                   # main folder/this sub-directory.
 ├── assignment 5/                   # assignment 5 folder - holds 3 files: assignment_5_risk.ipynb, assignment_5_risk.py and battle_results.txt.
 │   ├── assignment_5_risk.ipynb     # main assignment 5 file.
-│   ├── assignment_5_risk.py        # an older version of assignment 5.
+│   ├── assignment_5_risk.py        # a basic version of assignment 5.
 │   └── battle_results.txt          # this file it's created by running assignment_5_risk.ipynb, and holds all results of the game.
 ├── data-files                      # directory holding weatherreadings1.csv file which is used in assignment2-weather.ipynb
 │   └── weatherreadings1.csv
