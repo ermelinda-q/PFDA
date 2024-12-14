@@ -36,11 +36,28 @@ This git sub-repository (PFDA/assignments) holds all the assignment files of Pro
 ## About the Assignments
 
 There are four weekly assignments for the *Programming for Data Analytics* module, part of the *Computer Science for Data Analytics* program. The assignments involve reading data from `.csv` files, analyzing it, and creating visualizations like graphs and pie charts. This files are created using Python, in `.ipynb` Jupyter Notebook and `.py` formats. This repository showcases practical skills in working with data and creating visual insights.
+***
 
 **Week 2 Assignment**
+
 _File Name: assignment2-weather.ipynb_
 
+***Assignment Requirements:***
 
+* Task 1: Commit something to your assignment repository this week (anything) 
+    * I added test.txt file
+* Task 2: Create a jupyter notebook called assignment2-weather.ipynb that has a nice plot of the temperature over time ( "dryBulbTemperature_Celsius" ).
+    * .csv file: ./data-files/weatherreadings1.csv.
+
+**References:**
+
+- https://matplotlib.org/stable/api/markers_api.html
+
+_Date and time formating_
+
+- https://saturncloud.io/blog/how-to-change-datetime-format-in-pandas/#:~:text=To%20change%20the%20datetime%20format%20in%20Pandas%2C%20you%20first%20need,data%20in%20the%20desired%20format.
+- https://www.geeksforgeeks.org/plot-multiple-plots-in-matplotlib/
+- https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
 ***
 
 ## Get Started
