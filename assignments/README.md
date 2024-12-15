@@ -19,10 +19,10 @@ This git sub-repository (PFDA/assignments) holds all the assignment files of Pro
 
 ```
 ./assignments/                      # main folder/this sub-directory.
-├── assignment 5/                   # assignment 5 folder - holds 3 files: assignment_5_risk.ipynb, assignment_5_risk.py and battle_results.txt.
-│   ├── assignment_5_risk.ipynb     # main assignment 5 file.
-│   ├── assignment_5_risk.py        # a basic version of assignment 5.
-│   └── battle_results.txt          # this file it's created by running assignment_5_risk.ipynb, and holds all results of the game.
+├── assignment_5_risk/              # assignment 5 folder - holds 3 files: assignment_5_risk.ipynb, assignment_5_risk.py and battle_results.txt.
+│   ├── assignment_5_risk.ipynb     # main assignment 5 file - a Jupiter notebook version.
+│   ├── assignment_5_risk.py        # a basic version of assignment 5 in python.
+│   └── battle_results.txt          # this file it's created by running assignment_5_risk.ipynb,logging the results of each game played.
 ├── data-files                      # directory holding weatherreadings1.csv file which is used in assignment2-weather.ipynb
 │   └── weatherreadings1.csv
 ├── README.md                       # Main repository overview (this file).
@@ -78,9 +78,10 @@ _File Name: assignment03-pie.ipynb_
 
 ### Week 5 Assignment
 
-_File Name:_
-- assignment_5_risk.ipynb
-- assignment_5_risk.py (basic version)
+***The folder assignment-5 contains the following files:***
+- assignment_5_risk.ipynb - a Jupyter notebook version of the assignment.
+- assignment_5_risk.py - a basic version of the assignment in python.
+- battle_results.txt - a text file logging the results of each game played.
 
 ***Assignment Requirements:***
 
@@ -93,6 +94,7 @@ _For the last few marks._
 
 **References:**
 
+- https://chatgpt.com/
 - https://discuss.codecademy.com/t/can-we-sort-numpy-arrays-in-reverse-order/357941
 - https://stackoverflow.com/questions/26984414/efficiently-sorting-a-numpy-array-in-descending-order
 - https://discuss.python.org/t/separate-for-loops-in-zip-objects-with-different-loop-variables/52961/2
