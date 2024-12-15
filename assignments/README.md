@@ -15,7 +15,7 @@ You can find out more about [writing in MarkDown in GitHub's documentation](http
 
 This git sub-repository (PFDA/assignments) holds all the assignment files of Programming for Data Analytics module, as part of my [Hdip in Computer Science in Data Analytics](https://www.atu.ie/courses/higher-diploma-in-science-data-analytics#:~:text=You%20are%20a%20Level%208,topics%20in%20your%20original%20degree) in [ATU](https://www.atu.ie/).
 
-**Structure of the Repository**
+**Structure of this Sub-Repository**
 
 ```
 ./assignments/                      # main folder/this sub-directory.
@@ -98,7 +98,36 @@ _For the last few marks._
 - https://discuss.python.org/t/separate-for-loops-in-zip-objects-with-different-loop-variables/52961/2
 ***
 
-## Get Started
+### Week 6 Assignment
+
+_File Name: assignment_6_weather.ipynb_
+
+***Assignment Requirements:***
+
+* Create a python file or notebook called assignment_6_Weather (.py or .ipynb).
+* Get the data from this link: https://cli.fusio.net/cli/climate_data/webdata/hly4935.csv
+
+_Plot:_
+- The temperature
+- The mean temperature each day
+- The mean temperature for each month
+
+_For the last 40% of the marks Plot:_
+- The Windspeed (there is data missing from this column)
+- The rolling windspeed (say over 24 hours)
+- The max windspeed for each day
+- The monthly mean of the daily max windspeeds.
+
+**References:**
+
+- https://chatgpt.com/
+- https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html
+- https://stackoverflow.com/questions/34682828/extracting-specific-selected-columns-to-new-dataframe-as-a-copy
+- https://pandas.pydata.org/docs/user_guide/missing_data.html
+- https://note.nkmk.me/en/python-pandas-nan-extract/
+***
+
+## Get Started - How To run this files
 
 To run the files stored in this repository you will need to download and install in your computer the following apps:
 
