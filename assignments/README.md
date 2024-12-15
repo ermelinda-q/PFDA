@@ -78,6 +78,25 @@ _File Name: assignment03-pie.ipynb_
 
 ### Week 5 Assignment
 
+_File Name:_
+- assignment_5_risk.ipynb
+- assignment_5_risk.py (basic version)
+
+***Assignment Requirements:***
+
+* Write a program (or notebook) called assignment_5_risk (.py or .ipynb)
+* The program should simulates 1000 individual battle rounds in Risk (3 attacker vs 2 defender) and plots the result.
+* One battle round is one shake of the attacker and defender dice.
+
+_For the last few marks._
+* A more complicated version simulates a full series of rounds for armies of arbitrary sizes, until one side is wiped out, and plots the results.
+
+**References:**
+
+- https://discuss.codecademy.com/t/can-we-sort-numpy-arrays-in-reverse-order/357941
+- https://stackoverflow.com/questions/26984414/efficiently-sorting-a-numpy-array-in-descending-order
+- https://discuss.python.org/t/separate-for-loops-in-zip-objects-with-different-loop-variables/52961/2
+***
 
 ## Get Started
 
