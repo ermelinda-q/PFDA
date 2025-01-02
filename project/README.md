@@ -13,4 +13,5 @@ _by E.Qejvani_
 References:
 
 - [`~` Operator](https://pandas.pydata.org/docs/user_guide/indexing.html)
+- [Creating a new column from existing data](https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html)
 - 
