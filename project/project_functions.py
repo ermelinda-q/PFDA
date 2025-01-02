@@ -6,6 +6,8 @@
 
 import pandas as pd
 
+################## Function 1 ########################
+
 # This function counts the rows with empty cells or a single space as a value.
 def count_rows_with_empty_or_space_cells_detail(df):  
     # Create a Boolean DataFrame where cells equal ' ' or NaN are True
@@ -29,7 +31,8 @@ def count_rows_with_empty_or_space_cells_detail(df):
     # Return the total rows with all values
     return total_rows_with_no_value
 
-   
+
+################### Function 2 ##########################
 
 # This function cleans/removes all the rows that contain missing data in the DataFrame.
 def remove_rows_with_missing_data(df):  
@@ -42,3 +45,12 @@ def remove_rows_with_missing_data(df):
     return df_cleaned
 
 
+##################### Function 3 ########################
+
+# This function converts the data type of a column/columns to numeric data.
+def convert_columns_to_float(df, columns):
+   
+    # loop to convert more than one set/column of data to numeric.
+    for column in columns:
+        df[column] = pd.to_numeric(df[column], errors='coerce')
+    return df
