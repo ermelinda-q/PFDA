@@ -53,5 +53,62 @@ def convert_columns_to_float(df, columns):
    
     # loop to convert more than one set/column of data to numeric.
     for column in columns:
-        df[column] = pd.to_numeric(df[column], errors='coerce')
+        df[column] = pd.to_numeric(df[column], errors='coerce').astype('float32')
     return df
+
+
+#################### Function 4 #########################
+
+# This function calculate air density(kg/m³) from data available in the dataset: temperature, vapor pressure and mean sea level pressure.
+def calculate_air_density(temp, vappr, msl):
+    
+    # Constants needed for our formula
+    R_dry = 287.05  # Specific gas constant for dry air in J/(kg·K)
+    R_vapor = 461.5  # Specific gas constant for water vapor in J/(kg·K)
+    
+    # Convert temperature to Kelvin
+    T = temp + 273.15
+    
+    # Convert vapor pressure and mean sea level pressure to Pascals
+    P_vapor = vappr * 100  # Vapour pressure in Pa
+    P_msl = msl * 100  # Mean sea level pressure in Pa
+    
+    # Calculate the partial pressure of dry air
+    P_dry = P_msl - P_vapor  # Dry air pressure in Pa
+    
+    # Calculate air density using the formula
+    air_density = (P_dry / (R_dry * T)) + (P_vapor / (R_vapor * T))
+    
+    return air_density
+
+
+#################### Function 5 ###########################
+
+# This function adds a new column(air_density) to our dataset. It calls the calucalte_air_density function.
+# After the air density calculations removes the columns used.
+def add_air_density_column(df):
+    
+    # Apply the air density calculation function row-wise
+    df['air_density'] = df.apply(lambda row: calculate_air_density(row['temp'], row['vappr'], row['msl']), axis=1)
+    
+    # Remove the columns that are no longer needed
+    df = df.drop(columns=['temp', 'vappr', 'msl'])  # Remove these columns
+    
+    return df
+
+
+##################### Function 6 ############################
+
+# This function groups a given dataset by the time entered as a parameter.
+def group_by_dataset(df, time='D'):
+    
+    # Group by the specified time period
+    if time == 'decade':
+        # Group by decade (e.g., 2020s, 2030s, etc.)
+        df.loc[:, 'decade'] = (df.index.year // 10) * 10
+        grouped_df = df.groupby('decade').resample('D').size().groupby('decade').sum()
+    else:
+        # For daily, weekly, monthly, or yearly grouping
+        grouped_df = df.resample(time).size()
+    
+    return grouped_df
