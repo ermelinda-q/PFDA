@@ -35,14 +35,6 @@ def count_rows_with_empty_or_space_cells_detail(df):
 ################### Function 2 ##########################
 
 # This function cleans/removes all the rows that contain missing data in the DataFrame.
-# def remove_rows_with_missing_data(df):  
-#     # Create a Boolean DataFrame where cells equal ' ' or NaN are True
-#     df_to_clean = (df == ' ') | (df.isnull())  # Checks for both empty space ' ' and NaN values
-#     
-#     # Remove rows with any missing data (either ' ' or NaN)
-#     df_cleaned = df[~df_to_clean.any(axis=1)]  # Keep rows where no cells are missing
-#     
-#     return df_cleaned
 def remove_rows_with_missing_data(df):
    
     # Replace empty strings and single spaces with NaN for consistent handling
