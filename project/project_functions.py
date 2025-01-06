@@ -102,12 +102,12 @@ def add_air_density_column(df):
 
 # This function groups a given dataset by the time entered as a parameter.
 def group_by_dataset(df, time='D'):
-    
-    # Group by the specified time period
     if time == 'decade':
-        # Group by decade (e.g., 2020s, 2030s, etc.)
-        df.loc[:, 'decade'] = (df.index.year // 10) * 10
-        grouped_df = df.groupby('decade').resample('D').size().groupby('decade').sum()
+        # Create a temporary DataFrame with the 'decade' column
+        df_temp = df.copy()  # Avoid modifying the original DataFrame
+        df_temp['decade'] = (df_temp.index.year // 10) * 10
+        # Group by decade.
+        grouped_df = df_temp.groupby('decade').size()
     else:
         # For daily, weekly, monthly, or yearly grouping
         grouped_df = df.resample(time).size()
