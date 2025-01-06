@@ -49,11 +49,12 @@ def remove_rows_with_missing_data(df):
 ##################### Function 3 ########################
 
 # This function converts the data type of a column/columns to numeric data.
+# I'm converting the data type to float32 to use less memory because of the large amount of data in my dataset.
 def convert_columns_to_float(df, columns):
    
     # loop to convert more than one set/column of data to numeric.
     for column in columns:
-        df[column] = pd.to_numeric(df[column], errors='coerce').astype('float32')
+        df[column] = pd.to_numeric(df[column], errors='coerce').astype('float32') 
     return df
 
 
