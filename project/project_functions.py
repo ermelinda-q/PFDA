@@ -70,7 +70,7 @@ def calculate_air_density(temp, vappr, msl):
     # Convert temperature to Kelvin
     T = temp + 273.15
     
-    # Convert vapor pressure and mean sea level pressure to Pascals
+    # Convert vapor pressure and mean sea level pressure from hectoPascals(hPa) to Pascals(Pa)
     P_vapor = vappr * 100  # Vapour pressure in Pa
     P_msl = msl * 100  # Mean sea level pressure in Pa
     
