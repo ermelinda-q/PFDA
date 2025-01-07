@@ -99,13 +99,14 @@ def calculate_air_density(temp, vappr, msl):
 #     return df
 
 # General function to add a column to the dataframe. I am changing the above function to add other column if needed.
-def add_column(df, column):
+def add_new_column(df, column):
     if column == 'power_kw':
         
         # Add power output column
         df['power_kw'] = df.apply(
             lambda row: calculate_power_for_row(row['wdsp_m/s'], row['air_density']), axis=1
         )
+        df = df.drop(columns=['wddir'])
     elif column == 'air_density':
         # Add air density column
         df['air_density'] = df.apply(lambda row: calculate_air_density(row['temp'], row['vappr'], row['msl']), axis=1)

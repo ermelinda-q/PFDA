@@ -20,5 +20,4 @@ References:
 - [Select rows between two values](https://stackoverflow.com/questions/31617845/how-to-select-rows-in-a-dataframe-between-two-values?utm_source=chatgpt.com)
 - [pandas.DataFrame.resample](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html?utm_source=chatgpt.com)
 - [Understanding the Wind Power Equation](https://solidwize.com/wp-content/uploads/2013/07/7-Understanding-the-Wind-Power-Equation.pdf)
-
 - 
