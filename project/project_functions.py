@@ -5,6 +5,7 @@
 # Author: E. Qejvani
 
 import pandas as pd
+import math 
 
 ################## Function 1 ########################
 
@@ -87,13 +88,30 @@ def calculate_air_density(temp, vappr, msl):
 
 # This function adds a new column(air_density) to our dataset. It calls the calucalte_air_density function.
 # After the air density calculations removes the columns used.
-def add_air_density_column(df):
-    
-    # Apply the air density calculation function row-wise
-    df['air_density'] = df.apply(lambda row: calculate_air_density(row['temp'], row['vappr'], row['msl']), axis=1)
-    
-    # Remove the columns that are no longer needed
-    df = df.drop(columns=['temp', 'vappr', 'msl'])  # Remove these columns
+# def add_air_density_column(df):
+#     
+#     # Apply the air density calculation function row-wise
+#     df['air_density'] = df.apply(lambda row: calculate_air_density(row['temp'], row['vappr'], row['msl']), axis=1)
+#     
+#     # Remove the columns that are no longer needed
+#     df = df.drop(columns=['temp', 'vappr', 'msl'])  # Remove these columns
+#     
+#     return df
+
+# General function to add a column to the dataframe. I am changing the above function to add other column if needed.
+def add_column(df, column):
+    if column == 'power_kw':
+        
+        # Add power output column
+        df['power_kw'] = df.apply(
+            lambda row: calculate_power_for_row(row['wdsp_m/s'], row['air_density']), axis=1
+        )
+    elif column == 'air_density':
+        # Add air density column
+        df['air_density'] = df.apply(lambda row: calculate_air_density(row['temp'], row['vappr'], row['msl']), axis=1)
+        
+        # Remove the columns that are no longer needed for air density calculation
+        df = df.drop(columns=['temp', 'vappr', 'msl'])  # Remove these columns
     
     return df
 
@@ -113,3 +131,20 @@ def group_by_dataset(df, time='D'):
         grouped_df = df.resample(time).size()
     
     return grouped_df
+
+
+# Function to calculate the power output for a single row, including swept area calculation
+def calculate_power_for_row(windspeed, air_density):
+    # Calculate the swept area
+    diameter = 100
+    radius = diameter / 2
+    swept_area = math.pi * radius**2  # in square meters
+    
+    # Calculate the power output
+    efficiency = 0.4
+    power = 0.5 * air_density * swept_area * windspeed**3 * efficiency
+    
+    # Convert watts to kilowatts
+    power_kw = round(power / 1000, 2)  # divide by 1000 to get kW
+    
+    return power_kw
