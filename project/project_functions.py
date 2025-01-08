@@ -149,3 +149,14 @@ def calculate_power_for_row(windspeed, air_density):
     power_kw = round(power / 1000, 2)  # divide by 1000 to get kW
     
     return power_kw
+
+# Define a function to label seasons more clearly based on the Irish Season.
+def get_season(month):
+    if month in [11, 12, 1]:
+        return 'Winter'
+    elif month in [2, 3, 4]:
+        return 'Spring'
+    elif month in [5, 6, 7]:
+        return 'Summer'
+    else:
+        return 'Fall'
