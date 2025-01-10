@@ -135,7 +135,28 @@ def group_by_dataset(df, time='D'):
 
 
 # Function to calculate the power output for a single row, including swept area calculation
+# def calculate_power_for_row(windspeed, air_density):
+#     # Calculate the swept area
+#     diameter = 100
+#     radius = diameter / 2
+#     swept_area = math.pi * radius**2  # in square meters
+#     
+#     # Calculate the power output
+#     efficiency = 0.4
+#     power = 0.5 * air_density * swept_area * windspeed**3 * efficiency
+#     
+#     # Convert watts to kilowatts
+#     power_kw = round(power / 1000, 2)  # divide by 1000 to get kW
+#     
+#     return power_kw
+
+
+
 def calculate_power_for_row(windspeed, air_density):
+    # Check if the wind turbine is operational
+    if windspeed < 4 or windspeed > 25:
+        return 0  # No power generated outside the operational range
+    
     # Calculate the swept area
     diameter = 100
     radius = diameter / 2
@@ -159,4 +180,4 @@ def get_season(month):
     elif month in [5, 6, 7]:
         return 'Summer'
     else:
-        return 'Fall'
+        return 'Autumn'
