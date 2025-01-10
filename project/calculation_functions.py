@@ -2,6 +2,8 @@
 ### PFDA - BIG PROJECT - functions file ###
 ###########################################
 
+# This file contains all the functions that deal with calculations for my project
+
 # Author: E. Qejvani
 
 import pandas as pd
