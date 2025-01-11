@@ -50,7 +50,7 @@ def calculate_air_density(temp, vappr, msl):
 
 def calculate_power_for_row(windspeed, air_density):
     # Check if the wind turbine is operational
-    if windspeed < 4 or windspeed > 25:
+    if windspeed < 3 or windspeed > 22:
         return 0  # No power generated outside the operational range
     
     # Calculate the swept area
