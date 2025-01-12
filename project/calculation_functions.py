@@ -8,6 +8,7 @@
 
 import pandas as pd
 import math 
+from scipy.stats import linregress
 from working_with_df_functions import *
 
 ##################### Function 1 ########################
@@ -66,4 +67,46 @@ def calculate_power_for_row(windspeed, air_density):
     power_kw = round(power / 1000, 2)  # divide by 1000 to get kW
     
     return power_kw
+
+
+#################### Function 4 #########################
+
+# This function analyzes the trend of a given column over the last 20 years(or specified range)
+# Parameters used: df, column name, start year, end year.
+
+def analyze_column_trend(df, column_name, start_year=2004, end_year=2024):
+   
+    # Extract year for grouping
+    df['year'] = df.index.year
+
+    # Define date range
+    start_date = f'{start_year}-01-01'
+    end_date = f'{end_year}-12-31'
+
+    # Filter data for the specified range
+    df_filtered = df.loc[start_date:end_date]
+
+    # Group by year and calculate yearly sums for the specified column
+    yearly_data = df_filtered.groupby('year')[column_name].sum()
+
+    # Perform linear regression
+    years = yearly_data.index
+    slope, intercept, r_value, p_value, std_err = linregress(years, yearly_data.values)
+
+    # Determine the type of data being analyzed (Wind or Power)
+    if column_name == 'hours_in_range':
+        data_type = 'Wind'
+    elif column_name == 'power_kw':
+        data_type = 'Power'
+    else:
+        data_type = 'Unknown'
+
+    # Print regression details
+    print(f"Analysis for '{column_name}' ({data_type} Data) from {start_year} to {end_year}:")
+    print(f"Linear Trend: Slope = {slope:.2f} units/year, Intercept = {intercept:.2f}")
+    print(f"R-squared = {r_value**2:.2f}, p-value = {p_value:.2e}")
+    print(f"Minimum {column_name} per Year: {yearly_data.min()}")
+    print(f"Maximum {column_name} per Year: {yearly_data.max()}")
+
+    return yearly_data, slope, intercept, r_value, p_value, std_err, data_type
 

@@ -12,6 +12,7 @@ _by E.Qejvani_
 ***
 References:
 
+- [ChapGPT](https://chatgpt.com/)
 - [`~` Operator](https://pandas.pydata.org/docs/user_guide/indexing.html)
 - [The problem with `float32`](https://pythonspeed.com/articles/float64-float32-precision/)
 - [Creating a new column from existing data](https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html)
