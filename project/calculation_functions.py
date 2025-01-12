@@ -2,7 +2,7 @@
 ### PFDA - BIG PROJECT - functions file ###
 ###########################################
 
-# This file contains all the functions that deal with calculations for my project
+# This file contains all functions that deal with working with the DataFrame.
 
 # Author: E. Qejvani
 

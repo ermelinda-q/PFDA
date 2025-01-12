@@ -1,7 +1,15 @@
+###########################################
+### PFDA - BIG PROJECT - functions file ###
+###########################################
+
+# This file contains all functions that deal with working with the DataFrame.
+
+# Author: E. Qejvani
+
 import pandas as pd
 import os
 
-# This function is used to one of the datasets I used to analyze for this project.
+# This functions displays a user input box for the user to choose which dataset they want to upload.
 # The datasets: valentia.csv * johnsTC.csv(Johnstown Castle)
 # It loads the dataset and the required columns. Returns the dataset uploaded to the DataFrame.
 def load_wind_dataset():
