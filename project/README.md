@@ -45,7 +45,7 @@ The datasets contain hourly measurements of key meteorological parameters such a
 **Part 1 - Preparing the Dataset**
 - Purpose: Clean and format the dataset for analysis. This step involves loading the data, converting the necessary columns into the appropriate data types, and preparing the time series for analysis. Missing data is handled, and wind speed is converted to meters per second for consistency.
 
-  - _Functions:_
+  - _Some of the Functions used:_
     - `load_wind_dataset()`: Loads the dataset. Function found in `menu_code.py` file.
     - `convert_columns_to_float(columns to convert)`: Converts the data in the specified columns to float32(`.float32`). Function found in `calculation_functions.py` file.
     - `count_rows_with_empty_or_space_cells_detail(df)`: Counts all the rows containing Nan value, no value or single space value and returns a message how many rows contain 1, 2, etc.. invalid cells. Found in `working_with_df_functions.py` file.
@@ -57,7 +57,7 @@ The datasets contain hourly measurements of key meteorological parameters such a
 
 **Part 2 - Analyzing the Data**
 - Purpose:Perform deeper analysis on the weather variables to assess their relationship with wind energy. By calculating air density and estimating power output based on wind speed and other factors, we can get insights into the wind turbine's potential for energy generation.
-  - _Functions:_ 
+  - _Some of the Functions used:_ 
     - `add_new_column(df, column)`: This functions is found in `working_with_df_functions.py` file and call two functions inside based on the users choice:
         - `def calculate_air_density(temp, vappr, msl)`: Air density is calculated using the ideal gas law based on the data in the dataset.
         - `def calculate_power_for_row(windspeed, air_density)`: Power output is estimated with a formula that factors in wind speed, air density, and turbine size.
@@ -68,7 +68,7 @@ The datasets contain hourly measurements of key meteorological parameters such a
 
 **Part 3 - Operational Range Analysis**
 - Purpose: Analyze when the wind turbine is within its operational range. This is done by calculating how many hours the wind speed stays within the turbine’s operational limits (3 m/s to 22 m/s). The data is filtered to reflect this range, and power output is adjusted accordingly.
-  - _Functions:_ 
+  - _Some of the Functions used:_
     - `add_new_column(df, column)`: This functions is found in `working_with_df_functions.py` file and call two functions inside based on the users choice:
         - Adds `in_range` column to check if wind speed is in range [4, 25]
         - Add `hours_in_range` column to count hours with wind speed in range [4, 25]
@@ -79,7 +79,7 @@ The datasets contain hourly measurements of key meteorological parameters such a
     
 **Part 4 - Seasonal Analysis**
 - Purpose: Understand the variation in wind speed and power output across seasons. The analysis helps identify the best seasons for wind energy production by comparing seasonal averages of key metrics like wind speed and power output.
-  - _Functions:_ 
+  - _Some of the Functions used:_ 
     - Data is grouped by season, and average values are calculated for each season.
     - Visualizations like stacked bar charts and pie charts are created to highlight seasonal contributions to wind energy generation.
   - _References:_ 
@@ -87,7 +87,7 @@ The datasets contain hourly measurements of key meteorological parameters such a
 
 **Part 5 - Trend Analysis**
 - Purpose: Analyze wind speed and power output trends over the past 20 years (2004-2024) to detect long-term patterns. This analysis involves random sampling to study wind variations on selected days and applying linear regression to analyze yearly trends.
-  - _Functions:_ 
+  - _Some of the Functions used:_ 
     - `.random.choice()`: Used for random sampling to explore daily variations.
     - `linregress()`: Applies linear regression to detect long-term trends in yearly data.
   - _References:_ 
@@ -96,7 +96,7 @@ The datasets contain hourly measurements of key meteorological parameters such a
 
 **Last Part - Predictions**
 - Purpose: Predict future wind energy performance. Linear regression is used to forecast power and wind speed trends for 2025-2029, while SARIMA models forecast wind conditions for spring 2025, capturing seasonal patterns.
-  - _Functions:_ 
+  - _Some of the Functions used:_ 
     - `linregress()`: Used for predicting long-term trends based on historical data.
     - `SARIMAX()`: Used for SARIMA models to forecast seasonal wind speed and power output.
   - _References:_ 
