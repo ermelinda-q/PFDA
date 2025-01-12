@@ -72,6 +72,7 @@ def group_by_dataset(df, time='D'):
 
 # Define a function to label seasons more clearly based on the Irish Season.
 def get_season(month):
+    
     if month in [11, 12, 1]:
         return 'Winter'
     elif month in [2, 3, 4]:
